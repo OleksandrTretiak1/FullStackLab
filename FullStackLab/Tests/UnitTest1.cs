@@ -9,11 +9,10 @@ namespace Tests
         [Fact]
         public void BuildApiUrl_ReturnsCorrectFormattedString()
         {
-            var service = new WeatherService();
             string city = "Kyiv";
             string key = "testkey123";
 
-            string result = service.BuildApiUrl(city, key);
+            string result = WeatherService.BuildApiUrl(city, key);
 
             Assert.Equal("https://api.openweathermap.org/data/2.5/weather?q=Kyiv&appid=testkey123&units=metric", result);
         }
@@ -21,9 +20,8 @@ namespace Tests
         [Fact]
         public void BuildApiUrl_EmptyCity_ThrowsException()
         {
-            var service = new WeatherService();
 
-            Assert.Throws<ArgumentException>(() => service.BuildApiUrl("", "testkey"));
+            Assert.Throws<ArgumentException>(() => WeatherService.BuildApiUrl("", "testkey"));
         }
     }
 }

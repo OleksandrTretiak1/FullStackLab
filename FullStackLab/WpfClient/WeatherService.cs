@@ -2,7 +2,7 @@
 {
     public class WeatherService
     {
-        public string BuildApiUrl(string city, string apiKey)
+        public static string BuildApiUrl(string city, string apiKey)
         {
             if (string.IsNullOrWhiteSpace(city) || string.IsNullOrWhiteSpace(apiKey))
             {

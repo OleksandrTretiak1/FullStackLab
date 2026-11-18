@@ -59,8 +59,7 @@ namespace WpfClient
                 return;
             }
 
-            var weatherService = new WeatherService();
-            string url = weatherService.BuildApiUrl(city, apiKey ?? "");
+            string url = WeatherService.BuildApiUrl(city, apiKey ?? "");
 
             try
             {
