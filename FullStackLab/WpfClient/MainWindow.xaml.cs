@@ -59,7 +59,8 @@ namespace WpfClient
                 return;
             }
 
-            string url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric";
+            var weatherService = new WeatherService();
+            string url = weatherService.BuildApiUrl(city, apiKey ?? "");
 
             try
             {
