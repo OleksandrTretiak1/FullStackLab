@@ -19,20 +19,28 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <TextBox x:Name="CityTextBox"
-                 Background="White" Foreground="#333333"
-                 BorderBrush="#CCCCCC" BorderThickness="1"
-                 FontSize="14" Padding="8" Text="Cherkasy"
-                 VerticalContentAlignment="Center"/>
+             Background="White" Foreground="#333333"
+             BorderBrush="#CCCCCC" BorderThickness="1"
+             FontSize="14" Padding="8" Text="Cherkasy"
+             VerticalContentAlignment="Center"/>
 
             <Button x:Name="GetWeatherButton" Grid.Column="1"
-                Content="Отримати дані"
-                Background="#0078D7" Foreground="White"
-                BorderThickness="0"
-                FontSize="14" Padding="20,8" Margin="10,0,0,0"
-                Click="GetWeatherButton_Click"/>
+            Content="Отримати дані"
+            Background="#0078D7" Foreground="White"
+            BorderThickness="0"
+            FontSize="14" Padding="20,8" Margin="10,0,0,0"
+            Click="GetWeatherButton_Click"/>
+
+            <Button x:Name="ClearHistoryButton" Grid.Column="2"
+            Content="Очистити"
+            Background="#D32F2F" Foreground="White"
+            BorderThickness="0"
+            FontSize="14" Padding="20,8" Margin="10,0,0,0"
+            Click="ClearHistoryButton_Click"/>
         </Grid>
 
         <Border Grid.Row="2" Background="White" BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="4">
