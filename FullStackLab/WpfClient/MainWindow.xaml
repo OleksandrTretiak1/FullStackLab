@@ -6,7 +6,40 @@
         xmlns:local="clr-namespace:WpfClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="20" Background="#F5F5F5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <TextBlock Text="«Пошук погодних даних»" Foreground="#333333" FontSize="22" FontWeight="SemiBold" Margin="0,0,0,15"/>
+
+        <Grid Grid.Row="1" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="CityTextBox"
+                 Background="White" Foreground="#333333"
+                 BorderBrush="#CCCCCC" BorderThickness="1"
+                 FontSize="14" Padding="8" Text="Cherkasy"
+                 VerticalContentAlignment="Center"/>
+
+            <Button x:Name="GetWeatherButton" Grid.Column="1"
+                Content="Отримати дані"
+                Background="#0078D7" Foreground="White"
+                BorderThickness="0"
+                FontSize="14" Padding="20,8" Margin="10,0,0,0"
+                Click="GetWeatherButton_Click"/>
+        </Grid>
+
+        <Border Grid.Row="2" Background="White" BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="4">
+            <ScrollViewer Margin="10">
+                <TextBlock x:Name="ResultTextBlock"
+                       Foreground="#333333" FontSize="14" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Window>
